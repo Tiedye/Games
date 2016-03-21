@@ -31,7 +31,3 @@ private:
 	InputManager input_manager_;
 	GraphicsManager graphics_manager_;	
 };
-
-static LRESULT CALLBACK wnd_proc(HWND window, UINT, WPARAM, LPARAM);
-
-static Engine* application_handle = 0;

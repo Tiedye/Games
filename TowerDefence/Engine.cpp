@@ -1,5 +1,9 @@
 #include "Engine.h"
 
+static LRESULT CALLBACK wnd_proc(HWND window, UINT, WPARAM, LPARAM);
+
+static Engine* application_handle;
+
 Engine::Engine()
 {
 }
@@ -119,7 +123,7 @@ void Engine::InitializeWindows(int & screen_width, int & screen_height)
 	}
 	else
 	{
-		screen_width = 800; // TODO make this not hard coded
+		screen_width = 800; // TODO make this not hard coded (preferences eventually)
 		screen_height = 600;
 
 		pos_x = (GetSystemMetrics(SM_CXSCREEN) - screen_width) / 2;
